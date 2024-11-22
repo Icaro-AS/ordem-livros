@@ -1,4 +1,12 @@
-<h1 class="text-3xl font-bold">Autores</h1>
-<a href="/autores/george-martin">George Martin</a>
-<a href="/autores/tolkien">J.R.R Tolkien</a>
-<a href="/autores/jk-rowling">J.K Rowlin</a>
+<script lang="ts">
+  import ItemAutor from "../../components/autor/ItemAutor.svelte";
+  import autores from "../../constants/autores";
+</script>
+
+<div class="flex flex-col gap-5">
+  <div class="grid grid-cols-2 gap-5">
+    {#each autores as autor}
+      <ItemAutor {autor} />
+    {/each}
+  </div>
+</div>
