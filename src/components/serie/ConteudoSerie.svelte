@@ -1,4 +1,6 @@
 <script lang="ts">
+  import ItemLivro from "./ItemLivro.svelte";
+
   export let serie: any = null;
 </script>
 
@@ -13,7 +15,9 @@
 
     <h2>Lista de Livros</h2>
     <div class="grid grid-cols-3 gap-5">
-      {#each serie.livros as livro}{/each}
+      {#each serie.livros as livro}
+        <ItemLivro {livro} />
+      {/each}
     </div>
   </div>
 {/if}
